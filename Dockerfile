@@ -31,8 +31,9 @@ RUN apt-get update && \
 
 
 RUN git clone https://github.com/knobik/cloud-init-mailer.git /app && \
+    composer setup && \
     composer install -d /app
 
 EXPOSE 8000
 
-ENTRYPOINT ["php", "/app/artisan", "serve"]
+ENTRYPOINT ["php /app/artisan serve --host 0.0.0.0"]
