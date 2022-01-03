@@ -22,12 +22,29 @@ MAIL_FROM_NAME="${APP_NAME}"
 MAIL_TO=
 ```
 
+custom mail template (based on laravel blade):
+```yaml
+-v your-template.blade.php:/app/resources/views/mails/init-finished.blade.php
+```
+
+```html
+<div>
+    <p>
+        Host called home with data:
+    </p>
+    <p>
+        Host: {{ $hostname }}<br />
+        IP: {{ $ip }}
+    </p>
+</div>
+```
+
 cloud-init datasource example
 
 ```yaml
 phone_home:
-  url: http://your-server-hosting-this:8080/api/norify
+  url: http://your-server-hosting-this:8080/api/notify
   post:
    - hostname
   tries: 3
-```
+  ```

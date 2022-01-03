@@ -3,7 +3,7 @@
         Host called home with data:
     </p>
     <p>
-        Host: {{ $hostname }}<br />
-        IP: {{ $ip  }}
+        Hostname: {{ $hostname }}<br />
+        IP: {{ $ip }}
     </p>
 </div>
