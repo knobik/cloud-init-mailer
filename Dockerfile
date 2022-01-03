@@ -30,9 +30,8 @@ RUN apt-get update && \
     apt-get -y autoremove && apt-get clean
 
 
-RUN git clone https://github.com/knobik/rpicloud.git /tmp/rpicloud && \
-    composer install -d /tmp/rpicloud/api
-RUN composer install -d /app
+RUN git clone https://github.com/knobik/cloud-init-mailer.git /app && \
+    composer install -d /app
 
 EXPOSE 8000
 
