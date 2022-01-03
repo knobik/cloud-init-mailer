@@ -15,6 +15,8 @@ return [
 
     'default' => env('MAIL_MAILER', 'smtp'),
 
+    'mail_to' => env('MAIL_TO'),
+
     /*
     |--------------------------------------------------------------------------
     | Mailer Configurations
