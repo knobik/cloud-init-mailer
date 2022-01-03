@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build . -t knobik/cloud-init-mailer
+docker build . -t knobik/cloud-init-mailer --no-cache

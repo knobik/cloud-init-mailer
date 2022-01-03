@@ -31,8 +31,8 @@ RUN apt-get update && \
 
 
 RUN git clone https://github.com/knobik/cloud-init-mailer.git /app && \
-    composer setup && \
-    composer install -d /app
+    composer install -d /app && \
+    composer setup
 
 EXPOSE 8000
 
