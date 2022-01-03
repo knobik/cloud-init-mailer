@@ -26,8 +26,8 @@ cloud-init datasource example
 
 ```yaml
 phone_home:
-    url: http://your-server-hosting-this/api/norify
-    post:
-        - hostname
-    tries: 3
+  url: http://your-server-hosting-this:8080/api/norify
+  post:
+   - hostname
+  tries: 3
 ```
