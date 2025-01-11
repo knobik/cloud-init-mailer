@@ -21,7 +21,7 @@ class Controller extends BaseController
     public function notify(Request $request): JsonResponse
     {
         \Mail::to(config('mail.mail_to'))
-            ->send(new InitFinished($request->get('hostname'), $_SERVER['REMOTE_ADDR'] ?? null));
+            ->send(new InitFinished($request->get('hostname'), $request->ip()));
 
         return response()->json();
     }
